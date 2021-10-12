@@ -26,5 +26,50 @@ namespace DylanRoberts_Command
         {
             this.InitializeComponent();
         }
+
+        private void Up_Button()
+        {
+
+        }
+
+        private void Down_Button()
+        {
+
+        }
+
+        private void Left_Button()
+        {
+
+        }
+        
+        private void Right_Button()
+        {
+
+        }
+
+        private void Red_Button()
+        {
+
+        }
+
+        private void BlueButton()
+        {
+
+        }
+
+        private void Yellow_Button()
+        {
+
+        }
+
+        private void Green_Button()
+        {
+
+        }
+
+        private void Undo_Button()
+        {
+
+        }
     }
 }

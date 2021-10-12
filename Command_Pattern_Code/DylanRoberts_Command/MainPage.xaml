@@ -8,8 +8,9 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button Width="50px" Height="50px">Hello</Button>
+    <Grid Background="Azure">
+        <Grid.RowDefinitions></Grid.RowDefinitions>
+        <Grid.RowDefinitions ></Grid.RowDefinitions>
 
     </Grid>
 </Page>
