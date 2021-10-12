@@ -5,12 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Clients\" />
-    <Folder Include="Commands\" />
-    <Folder Include="Invokers\" />
-    <Folder Include="Receivers\" />
-  </ItemGroup>
-
 </Project>

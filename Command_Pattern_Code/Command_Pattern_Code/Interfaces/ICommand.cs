@@ -8,6 +8,9 @@ namespace Command_Pattern_Code.Interfaces
     {
 
         public void Execute();
+
+
+        public void Undo();
         
     }
 }

@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Command_Pattern_Code.Commands
+namespace Command_Pattern_Code.Interfaces
 {
-    class IReceiver
+    public interface IReceiver
     {
+
+        public void TurnOn();
+
+        public void TurnOff();
     }
 }
