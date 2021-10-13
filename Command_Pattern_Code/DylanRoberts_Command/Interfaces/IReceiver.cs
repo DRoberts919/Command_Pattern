@@ -8,5 +8,9 @@ namespace DylanRoberts_Command.Interfaces
 {
     interface IReceiver
     {
+
+        void TurnOn();
+
+        void TurnOff();
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command_Pattern_Code", "Command_Pattern_Code\Command_Pattern_Code.csproj", "{98B76B1A-EA41-45B8-8FCB-F566A8FC9C46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command_Pattern_Code", "Command_Pattern_Code\Command_Pattern_Code.csproj", "{98B76B1A-EA41-45B8-8FCB-F566A8FC9C46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DylanRoberts_Command", "DylanRoberts_Command\DylanRoberts_Command.csproj", "{B665AA25-594E-4F22-9356-453B3344D4A7}"
 EndProject
@@ -42,6 +42,8 @@ Global
 		{98B76B1A-EA41-45B8-8FCB-F566A8FC9C46}.Release|x86.ActiveCfg = Release|Any CPU
 		{98B76B1A-EA41-45B8-8FCB-F566A8FC9C46}.Release|x86.Build.0 = Release|Any CPU
 		{B665AA25-594E-4F22-9356-453B3344D4A7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B665AA25-594E-4F22-9356-453B3344D4A7}.Debug|Any CPU.Build.0 = Debug|x86
+		{B665AA25-594E-4F22-9356-453B3344D4A7}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{B665AA25-594E-4F22-9356-453B3344D4A7}.Debug|ARM.ActiveCfg = Debug|ARM
 		{B665AA25-594E-4F22-9356-453B3344D4A7}.Debug|ARM.Build.0 = Debug|ARM
 		{B665AA25-594E-4F22-9356-453B3344D4A7}.Debug|ARM.Deploy.0 = Debug|ARM
