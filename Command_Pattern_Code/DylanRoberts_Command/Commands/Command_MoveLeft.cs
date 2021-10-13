@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DylanRoberts_Command.Interfaces
+namespace DylanRoberts_Command.Commands
 {
-    public interface ICommand
+    class Command_MoveLeft
     {
-
-         void Execute();
-
-         void Undo();
     }
 }

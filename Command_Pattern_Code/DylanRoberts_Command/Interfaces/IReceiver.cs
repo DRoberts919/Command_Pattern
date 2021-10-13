@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace DylanRoberts_Command.Interfaces
 {
-    interface IReceiver
+    public interface IReceiver
     {
 
-        void TurnOn();
+       void Move_Up();
 
-        void TurnOff();
+        void Move_Down();
+
+        void Move_Right();
+
+        void Move_Left();
     }
 }
