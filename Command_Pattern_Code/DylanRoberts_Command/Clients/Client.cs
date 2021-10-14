@@ -15,9 +15,8 @@ namespace DylanRoberts_Command.Clients
 {
     class Client 
     {
-        Rectangle rectangle;
 
-        public IReceiver getClient(Rectangle rectangle)
+        public static IReceiver getClient(Rectangle rectangle)
         {
             return new Receiver.Receiver(rectangle);
         }

@@ -43,22 +43,22 @@ namespace DylanRoberts_Command.Receiver
 
         public void Move_Down()
         {
-            Canvas.SetTop(this.rectangle, 50);
+            Canvas.SetTop(this.rectangle, this.rectangle.RenderTransformOrigin.Y + 50);
         }
 
         public void Move_Left()
         {
-            Canvas.SetLeft(this.rectangle, -50);
+            Canvas.SetLeft(this.rectangle, this.rectangle.RenderTransformOrigin.X -50);
         }
 
         public void Move_Right()
         {
-            Canvas.SetLeft(this.rectangle, 50);
+            Canvas.SetLeft(this.rectangle, this.rectangle.RenderTransformOrigin.X + 50);
         }
 
         public void Move_Up()
         {
-            Canvas.SetTop(this.rectangle, -50);
+            Canvas.SetTop(this.rectangle, this.rectangle.RenderTransformOrigin.Y -50);
         }
 
 

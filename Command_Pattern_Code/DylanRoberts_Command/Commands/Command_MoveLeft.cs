@@ -14,7 +14,7 @@ namespace DylanRoberts_Command.Commands
 
         public Command_MoveLeft( IReceiver device)
         {
-            this.device = device
+            this.device = device;
         }
 
         public void Execute()

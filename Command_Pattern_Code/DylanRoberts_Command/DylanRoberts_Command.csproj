@@ -120,6 +120,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clients\Client.cs" />
+    <Compile Include="Commands\CommandBlue.cs" />
+    <Compile Include="Commands\CommandGreen.cs" />
+    <Compile Include="Commands\CommandYellow.cs" />
+    <Compile Include="Commands\Command_MoveDown.cs" />
+    <Compile Include="Commands\Command_MoveLeft.cs" />
+    <Compile Include="Commands\Command_MoveRight.cs" />
+    <Compile Include="Commands\Command_MoveUp.cs" />
+    <Compile Include="Commands\Command_Red.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Interfaces\IReceiver.cs" />
     <Compile Include="Invokers\Invoker.cs" />

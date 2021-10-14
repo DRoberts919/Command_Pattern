@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DylanRoberts_Command.Clients;
+using DylanRoberts_Command.Commands;
+using DylanRoberts_Command.Interfaces;
+using DylanRoberts_Command.Invokers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,18 +28,45 @@ namespace DylanRoberts_Command
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Rectangle rec = new Rectangle();
+        IReceiver receiver;
+        ICommand move_Up_Command;
+        Invoker move_Up;
+
+        ICommand move_Down_Command;
+        Invoker move_Down;
+
+        ICommand move_left_Command;
+        Invoker move_left;
+
+        ICommand move_Right_Command;
+        Invoker move_Right;
 
         public MainPage()
         {
             this.InitializeComponent();
             GenerateBoard();
+            receiver = Client.getClient(rec);
+            move_Up_Command = new Command_MoveUp(receiver);
+            move_Up = new Invoker(move_Up_Command);
+
+            move_Down_Command = new Command_MoveDown(receiver);
+            move_Down = new Invoker(move_Down_Command);
+
+            move_left_Command = new Command_MoveLeft(receiver);
+            move_left = new Invoker(move_left_Command);
+
+            move_Right_Command = new Command_MoveRight(receiver);
+            move_Right = new Invoker(move_Right_Command);
+
+
         }
 
         private void GenerateBoard()
         {
             
             
-             Rectangle rec = new Rectangle();
+             
 
              rec.Name = "Rectangle";
 
@@ -47,55 +78,59 @@ namespace DylanRoberts_Command
             rec.Width = 50;
             rec.Height = 50;
 
-            Canvas.SetLeft(rec, 50);
-            Canvas.SetTop(rec, 50);
+            //Canvas.SetLeft(rec, 50);
+            //Canvas.SetTop(rec, 50);
 
 
             gameBoard.Children.Add(rec);
-        }
-        
 
-        private void Up_Button()
-        {
-
-        }
-
-        private void Down_Button()
-        {
-
-        }
-
-        private void Left_Button()
-        {
+            
 
         }
         
-        private void Right_Button()
+
+        private void Up_Button(object sender, RoutedEventArgs e)
+        {
+            move_Up.Execute();
+        }
+
+        private void Down_Button(object sender, RoutedEventArgs e)
+        {
+            move_Down.Execute();
+        }
+
+        private void Left_Button(object sender, RoutedEventArgs e)
+        {
+            move_left.Execute();
+
+        }
+        
+        private void Right_Button(object sender, RoutedEventArgs e)
+        {
+            move_Right.Execute();
+        }
+
+        private void Red_Button(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Red_Button()
+        private void Blue_Button(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void BlueButton()
+        private void Yellow_Button(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Yellow_Button()
+        private void Green_Button(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Green_Button()
-        {
-
-        }
-
-        private void Undo_Button()
+        private void Undo_Button(object sender, RoutedEventArgs e)
         {
 
         }
