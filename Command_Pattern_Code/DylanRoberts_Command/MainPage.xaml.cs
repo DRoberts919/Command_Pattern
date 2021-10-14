@@ -24,7 +24,6 @@ namespace DylanRoberts_Command
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private Array[,] boardSetup;
 
         public MainPage()
         {

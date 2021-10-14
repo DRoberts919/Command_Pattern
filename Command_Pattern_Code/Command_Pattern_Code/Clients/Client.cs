@@ -2,11 +2,12 @@
 using Command_Pattern_Code.Receivers;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace Command_Pattern_Code.Clients
 {
-    public class Client
+    public class Client : IReceiver
     {
 
         public static IReceiver getClient()
@@ -14,5 +15,14 @@ namespace Command_Pattern_Code.Clients
             return new Receiver();
         }
 
+        public void TurnOff()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TurnOn()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -7,25 +7,23 @@ using System.Threading.Tasks;
 
 namespace DylanRoberts_Command.Invokers
 {
-   public class Invoker_Up
+    class Invoker 
     {
         ICommand command;
 
-        public Invoker_Up(ICommand command)
+        public Invoker(ICommand command)
         {
             this.command = command;
         }
 
-
-        public void ExecuteCommand()
+        public void Execute()
         {
             this.command.Execute();
         }
 
-        public void UndoCommand()
+        public void Undo()
         {
             this.command.Undo();
         }
-
     }
 }

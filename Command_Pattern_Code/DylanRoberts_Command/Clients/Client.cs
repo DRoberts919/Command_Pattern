@@ -6,16 +6,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
 
 namespace DylanRoberts_Command.Clients
 {
-    class Client
+    class Client 
     {
-        public static IReceiver GetClient()
+        Rectangle rectangle;
+
+        public IReceiver getClient(Rectangle rectangle)
         {
-            return new Receiver.Receiver();
+            return new Receiver.Receiver(rectangle);
         }
 
-
+ 
     }
 }

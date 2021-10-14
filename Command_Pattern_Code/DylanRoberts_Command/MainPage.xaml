@@ -36,7 +36,9 @@
                     HorizontalAlignment="Center"
                     Background="Gray"
                     Foreground="White"
-                    Grid.Row="0">
+                    Grid.Row="0"
+                    Click="Up_Button"
+                    >
                 
             </Button>
             <Button Content="Down"
@@ -44,7 +46,8 @@
                     HorizontalAlignment="Center"
                     Background="Gray"
                     Foreground="White"
-                    Grid.Row="1">
+                    Grid.Row="1"
+                    Click="Down_Button">
 
             </Button>
             <Button Content="Left"
@@ -52,7 +55,8 @@
                     HorizontalAlignment="Center"
                     Background="Gray"
                     Foreground="White"
-                    Grid.Row="2">
+                    Grid.Row="2"
+                    Click="Left_Button">
 
             </Button>
             <Button Content="Right"
@@ -60,7 +64,8 @@
                     HorizontalAlignment="Center"
                     Background="Gray"
                     Foreground="White"
-                    Grid.Row="3">
+                    Grid.Row="3"
+                    Click="Right_Button">
 
             </Button>
             
@@ -70,7 +75,8 @@
                     HorizontalAlignment="Center"
                     Background="Red"
                     Foreground="White"
-                    Grid.Row="4">
+                    Grid.Row="4"
+                    Click="Red_Button">
 
             </Button>
             <Button Content="Green"
@@ -78,7 +84,8 @@
                     HorizontalAlignment="Center"
                     Background="Green"
                     Foreground="White"
-                    Grid.Row="5">
+                    Grid.Row="5"
+                    Click="Green_Button">
 
             </Button>
             <Button Content="Blue"
@@ -86,7 +93,8 @@
                     HorizontalAlignment="Center"
                     Background="Blue"
                     Foreground="White"
-                    Grid.Row="6">
+                    Grid.Row="6"
+                    Click="Blue_Button">
 
             </Button>
             <Button Content="Yellow"
@@ -94,7 +102,8 @@
                     HorizontalAlignment="Center"
                     Background="Yellow"
                     Foreground="Black"
-                    Grid.Row="7">
+                    Grid.Row="7"
+                    Click="Yellow_Button">
 
             </Button>
             
@@ -105,7 +114,8 @@
                     HorizontalAlignment="Center"
                     Background="Gray"
                     Foreground="White"
-                    Grid.Row="8">
+                    Grid.Row="8"
+                    Click="Undo_Button">
 
             </Button>
 

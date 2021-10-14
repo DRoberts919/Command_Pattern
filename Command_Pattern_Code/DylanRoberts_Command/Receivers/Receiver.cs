@@ -4,52 +4,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Shapes;
 
 namespace DylanRoberts_Command.Receiver
 {
     public class Receiver : IReceiver
     {
+        Rectangle rectangle;
+
+        public Receiver(Rectangle rectangle)
+        {
+            this.rectangle = rectangle;
+        }
+
+
         public void Color_Blue()
         {
-            
-            throw new NotImplementedException();
+            this.rectangle.Fill = new SolidColorBrush(Colors.Blue);
         }
 
         public void Color_Green()
         {
-            throw new NotImplementedException();
+            this.rectangle.Fill = new SolidColorBrush(Colors.Green);
         }
 
         public void Color_Red()
         {
-            throw new NotImplementedException();
+            this.rectangle.Fill = new SolidColorBrush(Colors.Red);
         }
 
         public void Color_Yellow()
         {
-            throw new NotImplementedException();
+            this.rectangle.Fill = new SolidColorBrush(Colors.Yellow);
         }
 
         public void Move_Down()
         {
-            throw new NotImplementedException();
+            Canvas.SetTop(this.rectangle, 50);
         }
 
         public void Move_Left()
         {
-            throw new NotImplementedException();
+            Canvas.SetLeft(this.rectangle, -50);
         }
 
         public void Move_Right()
         {
-            throw new NotImplementedException();
+            Canvas.SetLeft(this.rectangle, 50);
         }
 
         public void Move_Up()
         {
-            throw new NotImplementedException();
+            Canvas.SetTop(this.rectangle, -50);
         }
 
-        
+
     }
 }
