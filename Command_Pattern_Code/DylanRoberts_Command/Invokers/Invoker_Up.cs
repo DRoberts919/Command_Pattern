@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DylanRoberts_Command.Invokers
 {
-   public class Invoker
+   public class Invoker_Up
     {
         ICommand command;
 
-        public Invoker(ICommand command)
+        public Invoker_Up(ICommand command)
         {
             this.command = command;
         }
