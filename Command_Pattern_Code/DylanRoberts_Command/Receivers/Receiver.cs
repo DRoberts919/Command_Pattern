@@ -11,6 +11,7 @@ namespace DylanRoberts_Command.Receiver
     {
         public void Color_Blue()
         {
+            
             throw new NotImplementedException();
         }
 
