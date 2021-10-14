@@ -42,6 +42,9 @@ namespace DylanRoberts_Command
         ICommand move_Right_Command;
         Invoker move_Right;
 
+        ICommand change_Color_Red;
+        Invoker color_Red;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -59,14 +62,15 @@ namespace DylanRoberts_Command
             move_Right_Command = new Command_MoveRight(receiver);
             move_Right = new Invoker(move_Right_Command);
 
+            change_Color_Red = new Command_Red(receiver);
+            color_Red = new Invoker(change_Color_Red);
+
 
         }
 
         private void GenerateBoard()
         {
-            
-            
-             
+    
 
              rec.Name = "Rectangle";
 
@@ -112,7 +116,7 @@ namespace DylanRoberts_Command
 
         private void Red_Button(object sender, RoutedEventArgs e)
         {
-
+            color_Red.Execute();
         }
 
         private void Blue_Button(object sender, RoutedEventArgs e)

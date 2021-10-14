@@ -124,7 +124,9 @@
         <!--grid for moving the block-->
         
 
-        <Canvas x:ConnectionId='2' x:Name="gameBoard" Grid.Column="2" Background="Black">
+        <Canvas x:ConnectionId='2' x:Name="gameBoard" Grid.Column="2" Background="Black"
+                Width="1200px"
+                Height="1000px">
             
         </Canvas>
         
