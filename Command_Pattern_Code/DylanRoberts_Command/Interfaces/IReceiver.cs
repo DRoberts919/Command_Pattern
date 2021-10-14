@@ -16,5 +16,13 @@ namespace DylanRoberts_Command.Interfaces
         void Move_Right();
 
         void Move_Left();
+
+        void Color_Red();
+
+        void Color_Blue();
+
+        void Color_Green();
+
+        void Color_Yellow();
     }
 }

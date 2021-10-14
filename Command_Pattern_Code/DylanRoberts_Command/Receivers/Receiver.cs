@@ -9,6 +9,26 @@ namespace DylanRoberts_Command.Receiver
 {
     public class Receiver : IReceiver
     {
+        public void Color_Blue()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Color_Green()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Color_Red()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Color_Yellow()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Move_Down()
         {
             throw new NotImplementedException();
