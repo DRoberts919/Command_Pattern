@@ -124,6 +124,7 @@ namespace DylanRoberts_Command
         private void Down_Button(object sender, RoutedEventArgs e)
         {
             move_Down.Execute();
+            invokers.Push(move_Down);
         }
 
         private void Left_Button(object sender, RoutedEventArgs e)
@@ -163,11 +164,22 @@ namespace DylanRoberts_Command
 
         private void Undo_Button(object sender, RoutedEventArgs e)
         {
-
-            foreach (Invoker command in invokers)
+            try
             {
-                command.Undo();
+
+            invokers.Peek().Undo();
+            invokers.Pop();
             }
+            catch
+            {
+                Console.WriteLine("You cant undo now");
+            }
+
+            //foreach (Invoker command in invokers)
+            //{
+            //    command.Undo();
+                
+            //}
 
 
         }
