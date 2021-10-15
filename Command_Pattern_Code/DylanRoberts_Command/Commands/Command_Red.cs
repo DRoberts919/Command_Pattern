@@ -13,6 +13,8 @@ namespace DylanRoberts_Command.Commands
 
         
 
+        
+
         public Command_Red(IReceiver device)
         {
             this.device = device;

@@ -29,6 +29,9 @@ namespace DylanRoberts_Command
     public sealed partial class MainPage : Page
     {
         Rectangle rec = new Rectangle();
+
+        Stack<Invoker> invokers = new Stack<Invoker>();
+
         IReceiver receiver;
         ICommand move_Up_Command;
         Invoker move_Up;
@@ -44,6 +47,15 @@ namespace DylanRoberts_Command
 
         ICommand change_Color_Red;
         Invoker color_Red;
+
+        ICommand change_Color_Blue;
+        Invoker color_Blue;
+
+        ICommand change_Color_Green;
+        Invoker color_Green;
+
+        ICommand Change_Color_Yellow;
+        Invoker color_Yellow;
 
         public MainPage()
         {
@@ -65,6 +77,14 @@ namespace DylanRoberts_Command
             change_Color_Red = new Command_Red(receiver);
             color_Red = new Invoker(change_Color_Red);
 
+            change_Color_Blue = new CommandBlue(receiver);
+            color_Blue = new Invoker(change_Color_Blue);
+
+            change_Color_Green = new CommandGreen(receiver);
+            color_Green = new Invoker(change_Color_Green);
+
+            Change_Color_Yellow = new CommandYellow(receiver);
+            color_Yellow = new Invoker(Change_Color_Yellow);
 
         }
 
@@ -96,6 +116,9 @@ namespace DylanRoberts_Command
         private void Up_Button(object sender, RoutedEventArgs e)
         {
             move_Up.Execute();
+
+
+            invokers.Push(move_Up);
         }
 
         private void Down_Button(object sender, RoutedEventArgs e)
@@ -107,11 +130,15 @@ namespace DylanRoberts_Command
         {
             move_left.Execute();
 
+            invokers.Push(move_left);
+
         }
         
         private void Right_Button(object sender, RoutedEventArgs e)
         {
             move_Right.Execute();
+
+            invokers.Push(move_Right);
         }
 
         private void Red_Button(object sender, RoutedEventArgs e)
@@ -121,21 +148,27 @@ namespace DylanRoberts_Command
 
         private void Blue_Button(object sender, RoutedEventArgs e)
         {
-
+            color_Blue.Execute();
         }
 
         private void Yellow_Button(object sender, RoutedEventArgs e)
         {
-
+            color_Yellow.Execute();
         }
 
         private void Green_Button(object sender, RoutedEventArgs e)
         {
-
+            color_Green.Execute();
         }
 
         private void Undo_Button(object sender, RoutedEventArgs e)
         {
+
+            foreach (Invoker command in invokers)
+            {
+                command.Undo();
+            }
+
 
         }
     }
