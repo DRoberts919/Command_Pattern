@@ -20,11 +20,22 @@ namespace DylanRoberts_Command.Interfaces
 
         void Color_Red();
 
+        void Undo_Red();
+
         void Color_Blue();
+
+        void Undo_Blue();
+
 
         void Color_Green();
 
+        void Undo_Green();
+
         void Color_Yellow();
+
+        void Undo_Yellow();
+
+
 
         
     }

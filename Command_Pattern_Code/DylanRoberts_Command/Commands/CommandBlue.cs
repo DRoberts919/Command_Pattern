@@ -23,7 +23,7 @@ namespace DylanRoberts_Command.Commands
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            this.device.Undo_Blue();
         }
     }
 }

@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media;
 
 namespace DylanRoberts_Command.Commands
 {
     public class CommandGreen : ICommand
     {
         IReceiver device;
+
+        
 
         public CommandGreen(IReceiver device)
         {
@@ -24,7 +27,7 @@ namespace DylanRoberts_Command.Commands
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            this.device.Undo_Green();
         }
     }
 }

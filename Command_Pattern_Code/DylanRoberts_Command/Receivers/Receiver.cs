@@ -16,6 +16,8 @@ namespace DylanRoberts_Command.Receiver
     {
         Rectangle rectangle;
 
+        SolidColorBrush oldColor;
+
         public Receiver(Rectangle rectangle)
         {
             this.rectangle = rectangle;
@@ -25,7 +27,16 @@ namespace DylanRoberts_Command.Receiver
         public void Color_Blue()
         {
             this.rectangle.Fill = new SolidColorBrush(Colors.Blue);
+
         }
+
+        public void Undo_Blue()
+        {
+            
+            this.rectangle.Fill = new SolidColorBrush(Colors.Green);
+        }
+
+       
 
         public void Color_Green()
         {
@@ -41,6 +52,9 @@ namespace DylanRoberts_Command.Receiver
         {
             this.rectangle.Fill = new SolidColorBrush(Colors.Yellow);
         }
+
+
+
 
         public void Move_Down()
         {
@@ -62,7 +76,22 @@ namespace DylanRoberts_Command.Receiver
             Canvas.SetTop(this.rectangle, Canvas.GetTop(this.rectangle) - 50);
         }
 
+        public void Undo_Red()
+        {
+            this.rectangle.Fill = new SolidColorBrush(Colors.Yellow);
 
-        
+        }
+
+        public void Undo_Green()
+        {
+            this.rectangle.Fill = new SolidColorBrush(Colors.Blue);
+
+        }
+
+        public void Undo_Yellow()
+        {
+            this.rectangle.Fill = new SolidColorBrush(Colors.Red);
+
+        }
     }
 }

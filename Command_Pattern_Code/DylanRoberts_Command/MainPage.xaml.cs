@@ -63,6 +63,7 @@ namespace DylanRoberts_Command
             this.InitializeComponent();
             GenerateBoard();
             receiver = Client.getClient(rec);
+
             move_Up_Command = new Command_MoveUp(receiver);
             move_Up = new Invoker(move_Up_Command);
 
@@ -144,21 +145,28 @@ namespace DylanRoberts_Command
         private void Red_Button(object sender, RoutedEventArgs e)
         {
             color_Red.Execute();
+            invokers.Push(color_Red);
         }
 
         private void Blue_Button(object sender, RoutedEventArgs e)
         {
             color_Blue.Execute();
+            invokers.Push(color_Blue);
+
         }
 
         private void Yellow_Button(object sender, RoutedEventArgs e)
         {
             color_Yellow.Execute();
+            invokers.Push(color_Yellow);
+
         }
 
         private void Green_Button(object sender, RoutedEventArgs e)
         {
             color_Green.Execute();
+            invokers.Push(color_Green);
+
         }
 
         private void Undo_Button(object sender, RoutedEventArgs e)

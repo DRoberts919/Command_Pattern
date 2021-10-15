@@ -13,10 +13,6 @@ namespace DylanRoberts_Command.Commands
     {
         IReceiver device;
 
-        Color oldColor;
-
-        
-
         public Command_Red(IReceiver device)
         {
             this.device = device;
@@ -27,14 +23,12 @@ namespace DylanRoberts_Command.Commands
             
             this.device.Color_Red();
 
-            
-
 
         }
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            this.device.Undo_Red();
         }
     }
 }
