@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace DylanRoberts_Command.Commands
 {
@@ -11,7 +13,7 @@ namespace DylanRoberts_Command.Commands
     {
         IReceiver device;
 
-        
+        Color oldColor;
 
         
 
@@ -22,7 +24,12 @@ namespace DylanRoberts_Command.Commands
         }
         public void Execute()
         {
+            
             this.device.Color_Red();
+
+            
+
+
         }
 
         public void Undo()

@@ -33,6 +33,7 @@ namespace DylanRoberts_Command
         Stack<Invoker> invokers = new Stack<Invoker>();
 
         IReceiver receiver;
+
         ICommand move_Up_Command;
         Invoker move_Up;
 
@@ -102,8 +103,6 @@ namespace DylanRoberts_Command
             rec.Width = 50;
             rec.Height = 50;
 
-            //Canvas.SetLeft(rec, 50);
-            //Canvas.SetTop(rec, 50);
 
 
             gameBoard.Children.Add(rec);
