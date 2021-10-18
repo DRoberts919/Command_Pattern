@@ -4,11 +4,6 @@ using DylanRoberts_Command.Interfaces;
 using DylanRoberts_Command.Invokers;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -92,24 +87,18 @@ namespace DylanRoberts_Command
 
         private void GenerateBoard()
         {
-    
 
              rec.Name = "Rectangle";
 
              rec.Stroke = new SolidColorBrush(Colors.Black);
              rec.StrokeThickness = 3;
 
-            rec.Fill =new SolidColorBrush(Colors.Beige);
+            rec.Fill =new SolidColorBrush(Colors.Red);
 
             rec.Width = 50;
             rec.Height = 50;
 
-
-
             gameBoard.Children.Add(rec);
-
-            
-
         }
         
 
@@ -179,16 +168,9 @@ namespace DylanRoberts_Command
             }
             catch
             {
+                rec.Fill = new SolidColorBrush(Colors.Red);
                 Console.WriteLine("You cant undo now");
             }
-
-            //foreach (Invoker command in invokers)
-            //{
-            //    command.Undo();
-                
-            //}
-
-
         }
     }
 }

@@ -33,7 +33,7 @@ namespace DylanRoberts_Command.Receiver
         public void Undo_Blue()
         {
             
-            this.rectangle.Fill = new SolidColorBrush(Colors.Green);
+            this.rectangle.Fill = new SolidColorBrush(Colors.Blue);
         }
 
        
@@ -78,19 +78,19 @@ namespace DylanRoberts_Command.Receiver
 
         public void Undo_Red()
         {
-            this.rectangle.Fill = new SolidColorBrush(Colors.Yellow);
+            this.rectangle.Fill = new SolidColorBrush(Colors.Red);
 
         }
 
         public void Undo_Green()
         {
-            this.rectangle.Fill = new SolidColorBrush(Colors.Blue);
+            this.rectangle.Fill = new SolidColorBrush(Colors.Green);
 
         }
 
         public void Undo_Yellow()
         {
-            this.rectangle.Fill = new SolidColorBrush(Colors.Red);
+            this.rectangle.Fill = new SolidColorBrush(Colors.Yellow);
 
         }
     }
